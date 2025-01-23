@@ -182,7 +182,7 @@
 | <a name="input_id-domain"></a> [id-domain](#input\_id-domain) | n/a | `string` | `""` | no |
 | <a name="input_key_ring_name"></a> [key\_ring\_name](#input\_key\_ring\_name) | ## KMS key-ring ### | `string` | n/a | yes |
 | <a name="input_kms_region"></a> [kms\_region](#input\_kms\_region) | n/a | `string` | n/a | yes |
-| <a name="input_lb-name"></a> [lb-name](#input\_lb-name) | n/a | `string` | `""` | no |
+| <a name="input_lb-name"></a> [lb-name](#input\_lb-name) | Name of the load balancer | `string` | `""` | no |
 | <a name="input_lb-redirect-name"></a> [lb-redirect-name](#input\_lb-redirect-name) | n/a | `string` | `""` | no |
 | <a name="input_length"></a> [length](#input\_length) | n/a | `string` | `""` | no |
 | <a name="input_load-balancer-ip-name"></a> [load-balancer-ip-name](#input\_load-balancer-ip-name) | n/a | `string` | `""` | no |
