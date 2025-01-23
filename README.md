@@ -88,7 +88,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_app-domain"></a> [app-domain](#input\_app-domain) | n/a | `string` | `""` | no |
+| <a name="input_app-domain"></a> [app-domain](#input\_app-domain) | Name of application domain | `string` | `""` | no |
 | <a name="input_app_tag"></a> [app\_tag](#input\_app\_tag) | n/a | `string` | `""` | no |
 | <a name="input_az-1"></a> [az-1](#input\_az-1) | n/a | `string` | `""` | no |
 | <a name="input_az-2"></a> [az-2](#input\_az-2) | n/a | `string` | `""` | no |
