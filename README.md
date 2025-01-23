@@ -1,2 +1,343 @@
-# social-media-git-practice
-This repo has been created to practice git commands and concepts
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_google"></a> [google](#requirement\_google) | 6.12.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_archive"></a> [archive](#provider\_archive) | 2.7.0 |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_byts-akasha-app-crypto-basic-init"></a> [byts-akasha-app-crypto-basic-init](#module\_byts-akasha-app-crypto-basic-init) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-akasha-app-crypto-basic-key"></a> [byts-akasha-app-crypto-basic-key](#module\_byts-akasha-app-crypto-basic-key) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-akasha-app-crypto-passwd"></a> [byts-akasha-app-crypto-passwd](#module\_byts-akasha-app-crypto-passwd) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-akasha-execute-createdb"></a> [byts-akasha-execute-createdb](#module\_byts-akasha-execute-createdb) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-akasha-execute-dbscripts"></a> [byts-akasha-execute-dbscripts](#module\_byts-akasha-execute-dbscripts) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-akasha-execute-insertdatadb"></a> [byts-akasha-execute-insertdatadb](#module\_byts-akasha-execute-insertdatadb) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-akasha-execute-modifydatadb"></a> [byts-akasha-execute-modifydatadb](#module\_byts-akasha-execute-modifydatadb) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-app-crypto-basic-init"></a> [byts-app-crypto-basic-init](#module\_byts-app-crypto-basic-init) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-app-crypto-basic-key"></a> [byts-app-crypto-basic-key](#module\_byts-app-crypto-basic-key) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_byts-app-crypto-passwd"></a> [byts-app-crypto-passwd](#module\_byts-app-crypto-passwd) | ./modules/secret-manager/secret | n/a |
+| <a name="module_byts_app_crypto_passwd"></a> [byts\_app\_crypto\_passwd](#module\_byts\_app\_crypto\_passwd) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_cloud-sql-instance"></a> [cloud-sql-instance](#module\_cloud-sql-instance) | ./modules/cloud-sql | n/a |
+| <a name="module_cubroid"></a> [cubroid](#module\_cubroid) | ./modules/instance-templates | n/a |
+| <a name="module_cubroid-backend-service"></a> [cubroid-backend-service](#module\_cubroid-backend-service) | ./modules/backend-services | n/a |
+| <a name="module_cubroid-mig"></a> [cubroid-mig](#module\_cubroid-mig) | ./modules/mig | n/a |
+| <a name="module_cubyts"></a> [cubyts](#module\_cubyts) | ./modules/instance-templates | n/a |
+| <a name="module_cubyts-akashav2-byts-queue-sub"></a> [cubyts-akashav2-byts-queue-sub](#module\_cubyts-akashav2-byts-queue-sub) | ./modules/pub-sub/subscription-(pull) | n/a |
+| <a name="module_cubyts-akashav2-byts-queue-topic"></a> [cubyts-akashav2-byts-queue-topic](#module\_cubyts-akashav2-byts-queue-topic) | ./modules/pub-sub/topic | n/a |
+| <a name="module_cubyts-akashav2-customer-subscription-queue-sub"></a> [cubyts-akashav2-customer-subscription-queue-sub](#module\_cubyts-akashav2-customer-subscription-queue-sub) | ./modules/pub-sub/subscription-(pull) | n/a |
+| <a name="module_cubyts-akashav2-customer-subscription-queue-topic"></a> [cubyts-akashav2-customer-subscription-queue-topic](#module\_cubyts-akashav2-customer-subscription-queue-topic) | ./modules/pub-sub/topic | n/a |
+| <a name="module_cubyts-akashav2-gizmo-send-email-sub"></a> [cubyts-akashav2-gizmo-send-email-sub](#module\_cubyts-akashav2-gizmo-send-email-sub) | ./modules/pub-sub/subscription-(pull) | n/a |
+| <a name="module_cubyts-akashav2-gizmo-send-email-topic"></a> [cubyts-akashav2-gizmo-send-email-topic](#module\_cubyts-akashav2-gizmo-send-email-topic) | ./modules/pub-sub/topic | n/a |
+| <a name="module_cubyts-backend-service"></a> [cubyts-backend-service](#module\_cubyts-backend-service) | ./modules/backend-services | n/a |
+| <a name="module_cubyts-crypto-akasha"></a> [cubyts-crypto-akasha](#module\_cubyts-crypto-akasha) | ./modules/kms/key | n/a |
+| <a name="module_cubyts-crypto-akasha-decrypt"></a> [cubyts-crypto-akasha-decrypt](#module\_cubyts-crypto-akasha-decrypt) | ./modules/kms/key | n/a |
+| <a name="module_cubyts-crypto-akasha-mac"></a> [cubyts-crypto-akasha-mac](#module\_cubyts-crypto-akasha-mac) | ./modules/kms/key | n/a |
+| <a name="module_cubyts-cubroid-akashav2-queue-sub"></a> [cubyts-cubroid-akashav2-queue-sub](#module\_cubyts-cubroid-akashav2-queue-sub) | ./modules/pub-sub/subscription-(pull) | n/a |
+| <a name="module_cubyts-cubroid-akashav2-queue-topic"></a> [cubyts-cubroid-akashav2-queue-topic](#module\_cubyts-cubroid-akashav2-queue-topic) | ./modules/pub-sub/topic | n/a |
+| <a name="module_cubyts-mig"></a> [cubyts-mig](#module\_cubyts-mig) | ./modules/mig | n/a |
+| <a name="module_enable_apis"></a> [enable\_apis](#module\_enable\_apis) | ./modules/api-enable | n/a |
+| <a name="module_env-akasha-common-AWSHMACKEY"></a> [env-akasha-common-AWSHMACKEY](#module\_env-akasha-common-AWSHMACKEY) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_env-akasha-common-BYTSSQSQUEUEURL"></a> [env-akasha-common-BYTSSQSQUEUEURL](#module\_env-akasha-common-BYTSSQSQUEUEURL) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_env-akasha-common-GIZMOSENDEMAIL"></a> [env-akasha-common-GIZMOSENDEMAIL](#module\_env-akasha-common-GIZMOSENDEMAIL) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_env-akasha-common-PGHOST"></a> [env-akasha-common-PGHOST](#module\_env-akasha-common-PGHOST) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_env-akasha-common-SUBSCRIPTIONSQSQUEUEURL"></a> [env-akasha-common-SUBSCRIPTIONSQSQUEUEURL](#module\_env-akasha-common-SUBSCRIPTIONSQSQUEUEURL) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_eventarc-gizmo-send-email-akashav2-sub"></a> [eventarc-gizmo-send-email-akashav2-sub](#module\_eventarc-gizmo-send-email-akashav2-sub) | ./modules/pub-sub/subscription-(push) | n/a |
+| <a name="module_eventarc-subscriptionhandler-akashav2-sub"></a> [eventarc-subscriptionhandler-akashav2-sub](#module\_eventarc-subscriptionhandler-akashav2-sub) | ./modules/pub-sub/subscription-(push) | n/a |
+| <a name="module_firewalls"></a> [firewalls](#module\_firewalls) | ./modules/firewalls | n/a |
+| <a name="module_gizmo-send-email-pass"></a> [gizmo-send-email-pass](#module\_gizmo-send-email-pass) | ./modules/secret-manager/secret | n/a |
+| <a name="module_gizmo-send-email-user"></a> [gizmo-send-email-user](#module\_gizmo-send-email-user) | ./modules/secret-manager/secret | n/a |
+| <a name="module_gizmo_send_email_akashav2_cloud_function_bucket"></a> [gizmo\_send\_email\_akashav2\_cloud\_function\_bucket](#module\_gizmo\_send\_email\_akashav2\_cloud\_function\_bucket) | ./modules/storage/bucket | n/a |
+| <a name="module_gizmo_send_email_akashav2_function"></a> [gizmo\_send\_email\_akashav2\_function](#module\_gizmo\_send\_email\_akashav2\_function) | ./modules/cloud-function | n/a |
+| <a name="module_gizmo_send_email_akashav2_input_storage_bucket"></a> [gizmo\_send\_email\_akashav2\_input\_storage\_bucket](#module\_gizmo\_send\_email\_akashav2\_input\_storage\_bucket) | ./modules/storage/bucket | n/a |
+| <a name="module_gizmo_send_email_akashav2_storage_object"></a> [gizmo\_send\_email\_akashav2\_storage\_object](#module\_gizmo\_send\_email\_akashav2\_storage\_object) | ./modules/storage/object | n/a |
+| <a name="module_health-check-cubroid"></a> [health-check-cubroid](#module\_health-check-cubroid) | ./modules/health-check | n/a |
+| <a name="module_health-check-cubyts"></a> [health-check-cubyts](#module\_health-check-cubyts) | ./modules/health-check | n/a |
+| <a name="module_health-check-loader"></a> [health-check-loader](#module\_health-check-loader) | ./modules/health-check | n/a |
+| <a name="module_kms_key_ring"></a> [kms\_key\_ring](#module\_kms\_key\_ring) | ./modules/kms/key_ring | n/a |
+| <a name="module_load-balancer"></a> [load-balancer](#module\_load-balancer) | ./modules/load-balancer | n/a |
+| <a name="module_loader"></a> [loader](#module\_loader) | ./modules/instance-templates | n/a |
+| <a name="module_loader-backend-service"></a> [loader-backend-service](#module\_loader-backend-service) | ./modules/backend-services | n/a |
+| <a name="module_loader-mig"></a> [loader-mig](#module\_loader-mig) | ./modules/mig | n/a |
+| <a name="module_nat-instance"></a> [nat-instance](#module\_nat-instance) | ./modules/nat-instance | n/a |
+| <a name="module_routes"></a> [routes](#module\_routes) | ./modules/routes | n/a |
+| <a name="module_service_accounts"></a> [service\_accounts](#module\_service\_accounts) | ./modules/service-accounts | n/a |
+| <a name="module_strapiJWT"></a> [strapiJWT](#module\_strapiJWT) | ./modules/secret-manager/regional-secrets | n/a |
+| <a name="module_subnets"></a> [subnets](#module\_subnets) | ./modules/subnets | n/a |
+| <a name="module_subscriptionHandler-akashav2-asia-south1"></a> [subscriptionHandler-akashav2-asia-south1](#module\_subscriptionHandler-akashav2-asia-south1) | ./modules/cloud-function | n/a |
+| <a name="module_subscription_handler_cloud_function_bucket"></a> [subscription\_handler\_cloud\_function\_bucket](#module\_subscription\_handler\_cloud\_function\_bucket) | ./modules/storage/bucket | n/a |
+| <a name="module_subscription_handler_input_storage_bucket"></a> [subscription\_handler\_input\_storage\_bucket](#module\_subscription\_handler\_input\_storage\_bucket) | ./modules/storage/bucket | n/a |
+| <a name="module_subscription_handler_storage_object"></a> [subscription\_handler\_storage\_object](#module\_subscription\_handler\_storage\_object) | ./modules/storage/object | n/a |
+| <a name="module_vpc_network"></a> [vpc\_network](#module\_vpc\_network) | ./modules/vpc | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [archive_file.source](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
+| [archive_file.subscription_handler_source](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_app-domain"></a> [app-domain](#input\_app-domain) | n/a | `string` | `""` | no |
+| <a name="input_app_tag"></a> [app\_tag](#input\_app\_tag) | n/a | `string` | `""` | no |
+| <a name="input_az-1"></a> [az-1](#input\_az-1) | n/a | `string` | `""` | no |
+| <a name="input_az-2"></a> [az-2](#input\_az-2) | n/a | `string` | `""` | no |
+| <a name="input_backup-region"></a> [backup-region](#input\_backup-region) | n/a | `string` | `""` | no |
+| <a name="input_cloud_function_bucket_force_destroy"></a> [cloud\_function\_bucket\_force\_destroy](#input\_cloud\_function\_bucket\_force\_destroy) | n/a | `string` | `""` | no |
+| <a name="input_create_duration"></a> [create\_duration](#input\_create\_duration) | Duration to wait after creating the VPC network | `string` | `"60s"` | no |
+| <a name="input_cubroid-backend-service-name"></a> [cubroid-backend-service-name](#input\_cubroid-backend-service-name) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-base-instance-name"></a> [cubroid-base-instance-name](#input\_cubroid-base-instance-name) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-health-check-name"></a> [cubroid-health-check-name](#input\_cubroid-health-check-name) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-health-check-path"></a> [cubroid-health-check-path](#input\_cubroid-health-check-path) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-instance-template-machine-type"></a> [cubroid-instance-template-machine-type](#input\_cubroid-instance-template-machine-type) | The machine type for the instance template | `string` | n/a | yes |
+| <a name="input_cubroid-instance-template-module"></a> [cubroid-instance-template-module](#input\_cubroid-instance-template-module) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-instance-template-name"></a> [cubroid-instance-template-name](#input\_cubroid-instance-template-name) | The name of the instance template | `string` | n/a | yes |
+| <a name="input_cubroid-local-image"></a> [cubroid-local-image](#input\_cubroid-local-image) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-mig-name"></a> [cubroid-mig-name](#input\_cubroid-mig-name) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-service-account"></a> [cubroid-service-account](#input\_cubroid-service-account) | Account ID for the Cubroid instance service account | `string` | `""` | no |
+| <a name="input_cubroid-startup-script"></a> [cubroid-startup-script](#input\_cubroid-startup-script) | n/a | `string` | `""` | no |
+| <a name="input_cubroid-template-disk-size"></a> [cubroid-template-disk-size](#input\_cubroid-template-disk-size) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-akashav2-byts-queue"></a> [cubyts-akashav2-byts-queue](#input\_cubyts-akashav2-byts-queue) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-akashav2-byts-queue-sub-name"></a> [cubyts-akashav2-byts-queue-sub-name](#input\_cubyts-akashav2-byts-queue-sub-name) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-akashav2-customer-subscription-queue-sub"></a> [cubyts-akashav2-customer-subscription-queue-sub](#input\_cubyts-akashav2-customer-subscription-queue-sub) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-akashav2-customer-subscription-queue-topic"></a> [cubyts-akashav2-customer-subscription-queue-topic](#input\_cubyts-akashav2-customer-subscription-queue-topic) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-akashav2-gizmo-send-email"></a> [cubyts-akashav2-gizmo-send-email](#input\_cubyts-akashav2-gizmo-send-email) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-akashav2-gizmo-send-email-sub"></a> [cubyts-akashav2-gizmo-send-email-sub](#input\_cubyts-akashav2-gizmo-send-email-sub) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-backend-service-name"></a> [cubyts-backend-service-name](#input\_cubyts-backend-service-name) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-base-instance-name"></a> [cubyts-base-instance-name](#input\_cubyts-base-instance-name) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-crypto-akasha-decrypt-algorithm"></a> [cubyts-crypto-akasha-decrypt-algorithm](#input\_cubyts-crypto-akasha-decrypt-algorithm) | n/a | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-decrypt-key-name"></a> [cubyts-crypto-akasha-decrypt-key-name](#input\_cubyts-crypto-akasha-decrypt-key-name) | # kms cubyts-crypto-akasha-decrypt key ## | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-decrypt-key-purpose"></a> [cubyts-crypto-akasha-decrypt-key-purpose](#input\_cubyts-crypto-akasha-decrypt-key-purpose) | n/a | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-decrypt-protection-level"></a> [cubyts-crypto-akasha-decrypt-protection-level](#input\_cubyts-crypto-akasha-decrypt-protection-level) | n/a | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-key-algorithm"></a> [cubyts-crypto-akasha-key-algorithm](#input\_cubyts-crypto-akasha-key-algorithm) | n/a | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-key-name"></a> [cubyts-crypto-akasha-key-name](#input\_cubyts-crypto-akasha-key-name) | # kms cubyts-crypto-akasha key ## | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-key-purpose"></a> [cubyts-crypto-akasha-key-purpose](#input\_cubyts-crypto-akasha-key-purpose) | n/a | `string` | n/a | yes |
+| <a name="input_cubyts-crypto-akasha-protection-level"></a> [cubyts-crypto-akasha-protection-level](#input\_cubyts-crypto-akasha-protection-level) | n/a | `string` | n/a | yes |
+| <a name="input_cubyts-cubroid-akashav2-queue-sub"></a> [cubyts-cubroid-akashav2-queue-sub](#input\_cubyts-cubroid-akashav2-queue-sub) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-cubroid-akashav2-queue-topic"></a> [cubyts-cubroid-akashav2-queue-topic](#input\_cubyts-cubroid-akashav2-queue-topic) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-health-check-name"></a> [cubyts-health-check-name](#input\_cubyts-health-check-name) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-health-check-path"></a> [cubyts-health-check-path](#input\_cubyts-health-check-path) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-instance-template-machine-type"></a> [cubyts-instance-template-machine-type](#input\_cubyts-instance-template-machine-type) | The machine type for the instance template | `string` | n/a | yes |
+| <a name="input_cubyts-instance-template-name"></a> [cubyts-instance-template-name](#input\_cubyts-instance-template-name) | The name of the instance template | `string` | n/a | yes |
+| <a name="input_cubyts-local-image"></a> [cubyts-local-image](#input\_cubyts-local-image) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-mig-name"></a> [cubyts-mig-name](#input\_cubyts-mig-name) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-service-account"></a> [cubyts-service-account](#input\_cubyts-service-account) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-startup-script"></a> [cubyts-startup-script](#input\_cubyts-startup-script) | n/a | `string` | `""` | no |
+| <a name="input_cubyts-template-disk-size"></a> [cubyts-template-disk-size](#input\_cubyts-template-disk-size) | n/a | `string` | `""` | no |
+| <a name="input_cubytsakashav2hmackey-key-algorithm"></a> [cubytsakashav2hmackey-key-algorithm](#input\_cubytsakashav2hmackey-key-algorithm) | n/a | `string` | n/a | yes |
+| <a name="input_cubytsakashav2hmackey-key-name"></a> [cubytsakashav2hmackey-key-name](#input\_cubytsakashav2hmackey-key-name) | n/a | `string` | n/a | yes |
+| <a name="input_cubytsakashav2hmackey-key-purpose"></a> [cubytsakashav2hmackey-key-purpose](#input\_cubytsakashav2hmackey-key-purpose) | n/a | `string` | n/a | yes |
+| <a name="input_cubytsakashav2hmackey-protection-level"></a> [cubytsakashav2hmackey-protection-level](#input\_cubytsakashav2hmackey-protection-level) | n/a | `string` | n/a | yes |
+| <a name="input_eventarc-gizmo-send-email-akashav2-sub"></a> [eventarc-gizmo-send-email-akashav2-sub](#input\_eventarc-gizmo-send-email-akashav2-sub) | n/a | `string` | `""` | no |
+| <a name="input_eventarc-gizmo-send-email-audience"></a> [eventarc-gizmo-send-email-audience](#input\_eventarc-gizmo-send-email-audience) | n/a | `string` | `""` | no |
+| <a name="input_eventarc-gizmo-send-email-push_endpoint"></a> [eventarc-gizmo-send-email-push\_endpoint](#input\_eventarc-gizmo-send-email-push\_endpoint) | n/a | `string` | `""` | no |
+| <a name="input_eventarc-subscriptionhandler-akashav2-sub"></a> [eventarc-subscriptionhandler-akashav2-sub](#input\_eventarc-subscriptionhandler-akashav2-sub) | n/a | `string` | `""` | no |
+| <a name="input_eventarc-subscriptionhandler-audience"></a> [eventarc-subscriptionhandler-audience](#input\_eventarc-subscriptionhandler-audience) | n/a | `string` | `""` | no |
+| <a name="input_eventarc-subscriptionhandler-push_endpoint"></a> [eventarc-subscriptionhandler-push\_endpoint](#input\_eventarc-subscriptionhandler-push\_endpoint) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_available_cpu"></a> [gizmo\_send\_email\_akashav2\_config\_available\_cpu](#input\_gizmo\_send\_email\_akashav2\_config\_available\_cpu) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_available_memory"></a> [gizmo\_send\_email\_akashav2\_config\_available\_memory](#input\_gizmo\_send\_email\_akashav2\_config\_available\_memory) | n/a | `string` | `"256M"` | no |
+| <a name="input_gizmo_send_email_akashav2_config_env_variables"></a> [gizmo\_send\_email\_akashav2\_config\_env\_variables](#input\_gizmo\_send\_email\_akashav2\_config\_env\_variables) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_ingress_settings"></a> [gizmo\_send\_email\_akashav2\_config\_ingress\_settings](#input\_gizmo\_send\_email\_akashav2\_config\_ingress\_settings) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_max_instance_request_concurrency"></a> [gizmo\_send\_email\_akashav2\_config\_max\_instance\_request\_concurrency](#input\_gizmo\_send\_email\_akashav2\_config\_max\_instance\_request\_concurrency) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_service_account_email"></a> [gizmo\_send\_email\_akashav2\_config\_service\_account\_email](#input\_gizmo\_send\_email\_akashav2\_config\_service\_account\_email) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_timeout_seconds"></a> [gizmo\_send\_email\_akashav2\_config\_timeout\_seconds](#input\_gizmo\_send\_email\_akashav2\_config\_timeout\_seconds) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_config_traffic_to_latest_version"></a> [gizmo\_send\_email\_akashav2\_config\_traffic\_to\_latest\_version](#input\_gizmo\_send\_email\_akashav2\_config\_traffic\_to\_latest\_version) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_entrypoint"></a> [gizmo\_send\_email\_akashav2\_entrypoint](#input\_gizmo\_send\_email\_akashav2\_entrypoint) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_bucket_force_destroy"></a> [gizmo\_send\_email\_akashav2\_function\_bucket\_force\_destroy](#input\_gizmo\_send\_email\_akashav2\_function\_bucket\_force\_destroy) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_bucket_name"></a> [gizmo\_send\_email\_akashav2\_function\_bucket\_name](#input\_gizmo\_send\_email\_akashav2\_function\_bucket\_name) | ### gizmo send email akashav2 cloud function bucket #### | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_bucket_region"></a> [gizmo\_send\_email\_akashav2\_function\_bucket\_region](#input\_gizmo\_send\_email\_akashav2\_function\_bucket\_region) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_name"></a> [gizmo\_send\_email\_akashav2\_function\_name](#input\_gizmo\_send\_email\_akashav2\_function\_name) | ################ #gizmo send email akashav2 function ################ | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_name_description"></a> [gizmo\_send\_email\_akashav2\_function\_name\_description](#input\_gizmo\_send\_email\_akashav2\_function\_name\_description) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_name_runtime"></a> [gizmo\_send\_email\_akashav2\_function\_name\_runtime](#input\_gizmo\_send\_email\_akashav2\_function\_name\_runtime) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_function_region"></a> [gizmo\_send\_email\_akashav2\_function\_region](#input\_gizmo\_send\_email\_akashav2\_function\_region) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_input_force_destroy"></a> [gizmo\_send\_email\_akashav2\_input\_force\_destroy](#input\_gizmo\_send\_email\_akashav2\_input\_force\_destroy) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_input_storage_bucket_name"></a> [gizmo\_send\_email\_akashav2\_input\_storage\_bucket\_name](#input\_gizmo\_send\_email\_akashav2\_input\_storage\_bucket\_name) | #### gizmo send email akashav2 input storage bucket ##### | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_input_storage_bucket_region"></a> [gizmo\_send\_email\_akashav2\_input\_storage\_bucket\_region](#input\_gizmo\_send\_email\_akashav2\_input\_storage\_bucket\_region) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_input_uniform_bucket_level_access"></a> [gizmo\_send\_email\_akashav2\_input\_uniform\_bucket\_level\_access](#input\_gizmo\_send\_email\_akashav2\_input\_uniform\_bucket\_level\_access) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_object_bucket_name"></a> [gizmo\_send\_email\_akashav2\_object\_bucket\_name](#input\_gizmo\_send\_email\_akashav2\_object\_bucket\_name) | ### gizmo send email akashav2 storage object #### | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_object_content_type"></a> [gizmo\_send\_email\_akashav2\_object\_content\_type](#input\_gizmo\_send\_email\_akashav2\_object\_content\_type) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_service_config_max_instance_count"></a> [gizmo\_send\_email\_akashav2\_service\_config\_max\_instance\_count](#input\_gizmo\_send\_email\_akashav2\_service\_config\_max\_instance\_count) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_service_config_min_instance_count"></a> [gizmo\_send\_email\_akashav2\_service\_config\_min\_instance\_count](#input\_gizmo\_send\_email\_akashav2\_service\_config\_min\_instance\_count) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_storage_object_name"></a> [gizmo\_send\_email\_akashav2\_storage\_object\_name](#input\_gizmo\_send\_email\_akashav2\_storage\_object\_name) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_trigger_region"></a> [gizmo\_send\_email\_akashav2\_trigger\_region](#input\_gizmo\_send\_email\_akashav2\_trigger\_region) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_trigger_retry_policy"></a> [gizmo\_send\_email\_akashav2\_trigger\_retry\_policy](#input\_gizmo\_send\_email\_akashav2\_trigger\_retry\_policy) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_trigger_type"></a> [gizmo\_send\_email\_akashav2\_trigger\_type](#input\_gizmo\_send\_email\_akashav2\_trigger\_type) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_uniform_bucket_level_access"></a> [gizmo\_send\_email\_akashav2\_uniform\_bucket\_level\_access](#input\_gizmo\_send\_email\_akashav2\_uniform\_bucket\_level\_access) | n/a | `string` | `""` | no |
+| <a name="input_gizmo_send_email_akashav2_variable"></a> [gizmo\_send\_email\_akashav2\_variable](#input\_gizmo\_send\_email\_akashav2\_variable) | n/a | `string` | `""` | no |
+| <a name="input_http-frontend"></a> [http-frontend](#input\_http-frontend) | n/a | `string` | `""` | no |
+| <a name="input_http-proxy-name"></a> [http-proxy-name](#input\_http-proxy-name) | n/a | `string` | `""` | no |
+| <a name="input_https-frontend"></a> [https-frontend](#input\_https-frontend) | n/a | `string` | `""` | no |
+| <a name="input_https-proxy-name"></a> [https-proxy-name](#input\_https-proxy-name) | n/a | `string` | `""` | no |
+| <a name="input_id-app-cert-name"></a> [id-app-cert-name](#input\_id-app-cert-name) | n/a | `string` | `""` | no |
+| <a name="input_id-domain"></a> [id-domain](#input\_id-domain) | n/a | `string` | `""` | no |
+| <a name="input_key_ring_name"></a> [key\_ring\_name](#input\_key\_ring\_name) | ## KMS key-ring ### | `string` | n/a | yes |
+| <a name="input_kms_region"></a> [kms\_region](#input\_kms\_region) | n/a | `string` | n/a | yes |
+| <a name="input_lb-name"></a> [lb-name](#input\_lb-name) | n/a | `string` | `""` | no |
+| <a name="input_lb-redirect-name"></a> [lb-redirect-name](#input\_lb-redirect-name) | n/a | `string` | `""` | no |
+| <a name="input_length"></a> [length](#input\_length) | n/a | `string` | `""` | no |
+| <a name="input_load-balancer-ip-name"></a> [load-balancer-ip-name](#input\_load-balancer-ip-name) | n/a | `string` | `""` | no |
+| <a name="input_loader-backend-service-name"></a> [loader-backend-service-name](#input\_loader-backend-service-name) | n/a | `string` | `""` | no |
+| <a name="input_loader-base-instance-name"></a> [loader-base-instance-name](#input\_loader-base-instance-name) | n/a | `string` | `""` | no |
+| <a name="input_loader-health-check-name"></a> [loader-health-check-name](#input\_loader-health-check-name) | n/a | `string` | `""` | no |
+| <a name="input_loader-health-check-path"></a> [loader-health-check-path](#input\_loader-health-check-path) | n/a | `string` | `""` | no |
+| <a name="input_loader-instance-template-machine-type"></a> [loader-instance-template-machine-type](#input\_loader-instance-template-machine-type) | The machine type for the instance template | `string` | n/a | yes |
+| <a name="input_loader-instance-template-name"></a> [loader-instance-template-name](#input\_loader-instance-template-name) | The name of the instance template | `string` | n/a | yes |
+| <a name="input_loader-local-image"></a> [loader-local-image](#input\_loader-local-image) | n/a | `string` | `""` | no |
+| <a name="input_loader-mig-name"></a> [loader-mig-name](#input\_loader-mig-name) | n/a | `string` | `""` | no |
+| <a name="input_loader-service-account"></a> [loader-service-account](#input\_loader-service-account) | n/a | `string` | `""` | no |
+| <a name="input_loader-startup-script"></a> [loader-startup-script](#input\_loader-startup-script) | n/a | `string` | `""` | no |
+| <a name="input_loader-template-disk-size"></a> [loader-template-disk-size](#input\_loader-template-disk-size) | n/a | `string` | `""` | no |
+| <a name="input_message_rentention_duration-subscription"></a> [message\_rentention\_duration-subscription](#input\_message\_rentention\_duration-subscription) | n/a | `string` | `""` | no |
+| <a name="input_nat-image"></a> [nat-image](#input\_nat-image) | n/a | `string` | `""` | no |
+| <a name="input_nat-service-account"></a> [nat-service-account](#input\_nat-service-account) | Account ID for the NAT instance service account | `string` | `""` | no |
+| <a name="input_nat_availability_zone"></a> [nat\_availability\_zone](#input\_nat\_availability\_zone) | n/a | `string` | `""` | no |
+| <a name="input_nat_instance_machine_type"></a> [nat\_instance\_machine\_type](#input\_nat\_instance\_machine\_type) | n/a | `string` | `""` | no |
+| <a name="input_nat_instance_name"></a> [nat\_instance\_name](#input\_nat\_instance\_name) | n/a | `string` | `""` | no |
+| <a name="input_nat_route_name"></a> [nat\_route\_name](#input\_nat\_route\_name) | n/a | `string` | `""` | no |
+| <a name="input_nat_static_private_ip"></a> [nat\_static\_private\_ip](#input\_nat\_static\_private\_ip) | n/a | `string` | `""` | no |
+| <a name="input_nat_static_private_ip_name"></a> [nat\_static\_private\_ip\_name](#input\_nat\_static\_private\_ip\_name) | n/a | `string` | `""` | no |
+| <a name="input_nat_static_public_ip"></a> [nat\_static\_public\_ip](#input\_nat\_static\_public\_ip) | n/a | `string` | `""` | no |
+| <a name="input_nat_tag"></a> [nat\_tag](#input\_nat\_tag) | n/a | `string` | `""` | no |
+| <a name="input_object_bucket_name"></a> [object\_bucket\_name](#input\_object\_bucket\_name) | n/a | `string` | `""` | no |
+| <a name="input_output_path"></a> [output\_path](#input\_output\_path) | n/a | `string` | `""` | no |
+| <a name="input_peering_range"></a> [peering\_range](#input\_peering\_range) | n/a | `string` | `""` | no |
+| <a name="input_private_route_name"></a> [private\_route\_name](#input\_private\_route\_name) | n/a | `string` | `""` | no |
+| <a name="input_private_service_connection_name"></a> [private\_service\_connection\_name](#input\_private\_service\_connection\_name) | n/a | `string` | `""` | no |
+| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | n/a | `string` | `""` | no |
+| <a name="input_pub-sub-service-account"></a> [pub-sub-service-account](#input\_pub-sub-service-account) | n/a | `string` | `""` | no |
+| <a name="input_pub-sub-topic-name"></a> [pub-sub-topic-name](#input\_pub-sub-topic-name) | n/a | `string` | `""` | no |
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_10_name"></a> [regional\_secret\_10\_name](#input\_regional\_secret\_10\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_11_name"></a> [regional\_secret\_11\_name](#input\_regional\_secret\_11\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_12_name"></a> [regional\_secret\_12\_name](#input\_regional\_secret\_12\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_13_name"></a> [regional\_secret\_13\_name](#input\_regional\_secret\_13\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_14_name"></a> [regional\_secret\_14\_name](#input\_regional\_secret\_14\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_15_name"></a> [regional\_secret\_15\_name](#input\_regional\_secret\_15\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_16_name"></a> [regional\_secret\_16\_name](#input\_regional\_secret\_16\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_17_name"></a> [regional\_secret\_17\_name](#input\_regional\_secret\_17\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_1_name"></a> [regional\_secret\_1\_name](#input\_regional\_secret\_1\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_2_name"></a> [regional\_secret\_2\_name](#input\_regional\_secret\_2\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_3_name"></a> [regional\_secret\_3\_name](#input\_regional\_secret\_3\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_4_name"></a> [regional\_secret\_4\_name](#input\_regional\_secret\_4\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_5_name"></a> [regional\_secret\_5\_name](#input\_regional\_secret\_5\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_6_name"></a> [regional\_secret\_6\_name](#input\_regional\_secret\_6\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_7_name"></a> [regional\_secret\_7\_name](#input\_regional\_secret\_7\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_8_name"></a> [regional\_secret\_8\_name](#input\_regional\_secret\_8\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_9_name"></a> [regional\_secret\_9\_name](#input\_regional\_secret\_9\_name) | n/a | `string` | `""` | no |
+| <a name="input_regional_secret_region"></a> [regional\_secret\_region](#input\_regional\_secret\_region) | n/a | `string` | `""` | no |
+| <a name="input_secret-1-name"></a> [secret-1-name](#input\_secret-1-name) | n/a | `string` | `""` | no |
+| <a name="input_secret-2-name"></a> [secret-2-name](#input\_secret-2-name) | n/a | `string` | `""` | no |
+| <a name="input_secret-3-name"></a> [secret-3-name](#input\_secret-3-name) | n/a | `string` | `""` | no |
+| <a name="input_secret_data"></a> [secret\_data](#input\_secret\_data) | n/a | `string` | `""` | no |
+| <a name="input_secret_environment_variables"></a> [secret\_environment\_variables](#input\_secret\_environment\_variables) | n/a | `string` | `""` | no |
+| <a name="input_service"></a> [service](#input\_service) | n/a | `string` | `""` | no |
+| <a name="input_source_dir"></a> [source\_dir](#input\_source\_dir) | n/a | `string` | `""` | no |
+| <a name="input_special"></a> [special](#input\_special) | n/a | `string` | `""` | no |
+| <a name="input_sql_avilability_type"></a> [sql\_avilability\_type](#input\_sql\_avilability\_type) | n/a | `string` | `""` | no |
+| <a name="input_sql_database_version"></a> [sql\_database\_version](#input\_sql\_database\_version) | n/a | `string` | `""` | no |
+| <a name="input_sql_disk_size"></a> [sql\_disk\_size](#input\_sql\_disk\_size) | n/a | `string` | `""` | no |
+| <a name="input_sql_disk_type"></a> [sql\_disk\_type](#input\_sql\_disk\_type) | n/a | `string` | `""` | no |
+| <a name="input_sql_instance_name"></a> [sql\_instance\_name](#input\_sql\_instance\_name) | n/a | `string` | `""` | no |
+| <a name="input_sql_tier"></a> [sql\_tier](#input\_sql\_tier) | n/a | `string` | `""` | no |
+| <a name="input_ssl-policy-name"></a> [ssl-policy-name](#input\_ssl-policy-name) | n/a | `string` | `""` | no |
+| <a name="input_status-cubyts-cert-name"></a> [status-cubyts-cert-name](#input\_status-cubyts-cert-name) | n/a | `string` | `""` | no |
+| <a name="input_status-domain"></a> [status-domain](#input\_status-domain) | n/a | `string` | `""` | no |
+| <a name="input_storage_bucket_name-1"></a> [storage\_bucket\_name-1](#input\_storage\_bucket\_name-1) | n/a | `string` | `""` | no |
+| <a name="input_storage_object_name"></a> [storage\_object\_name](#input\_storage\_object\_name) | n/a | `string` | `""` | no |
+| <a name="input_storage_object_name-1"></a> [storage\_object\_name-1](#input\_storage\_object\_name-1) | n/a | `string` | `""` | no |
+| <a name="input_subnet_cidr_1"></a> [subnet\_cidr\_1](#input\_subnet\_cidr\_1) | CIDR block for the first subnet | `string` | n/a | yes |
+| <a name="input_subnet_cidr_2"></a> [subnet\_cidr\_2](#input\_subnet\_cidr\_2) | CIDR block for the second subnet | `string` | n/a | yes |
+| <a name="input_subnet_cidr_3"></a> [subnet\_cidr\_3](#input\_subnet\_cidr\_3) | CIDR block for the third subnet | `string` | n/a | yes |
+| <a name="input_subnet_cidr_4"></a> [subnet\_cidr\_4](#input\_subnet\_cidr\_4) | CIDR block for the fourth subnet | `string` | n/a | yes |
+| <a name="input_subnet_name_1"></a> [subnet\_name\_1](#input\_subnet\_name\_1) | The name of the first subnet | `string` | n/a | yes |
+| <a name="input_subnet_name_2"></a> [subnet\_name\_2](#input\_subnet\_name\_2) | The name of the second subnet | `string` | n/a | yes |
+| <a name="input_subnet_name_3"></a> [subnet\_name\_3](#input\_subnet\_name\_3) | The name of the third subnet | `string` | n/a | yes |
+| <a name="input_subnet_name_4"></a> [subnet\_name\_4](#input\_subnet\_name\_4) | The name of the fourth subnet | `string` | n/a | yes |
+| <a name="input_subscription_handler_cloud_function_bucket_name"></a> [subscription\_handler\_cloud\_function\_bucket\_name](#input\_subscription\_handler\_cloud\_function\_bucket\_name) | ### Subscription handler function bucket #### | `string` | `""` | no |
+| <a name="input_subscription_handler_cloud_function_bucket_region"></a> [subscription\_handler\_cloud\_function\_bucket\_region](#input\_subscription\_handler\_cloud\_function\_bucket\_region) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_config_available_memory"></a> [subscription\_handler\_config\_available\_memory](#input\_subscription\_handler\_config\_available\_memory) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_content_type"></a> [subscription\_handler\_content\_type](#input\_subscription\_handler\_content\_type) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_description"></a> [subscription\_handler\_description](#input\_subscription\_handler\_description) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_entrypoint"></a> [subscription\_handler\_entrypoint](#input\_subscription\_handler\_entrypoint) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_environment_variable"></a> [subscription\_handler\_environment\_variable](#input\_subscription\_handler\_environment\_variable) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_input_storage_bucket_force_destroy"></a> [subscription\_handler\_input\_storage\_bucket\_force\_destroy](#input\_subscription\_handler\_input\_storage\_bucket\_force\_destroy) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_input_storage_bucket_name"></a> [subscription\_handler\_input\_storage\_bucket\_name](#input\_subscription\_handler\_input\_storage\_bucket\_name) | #Subscription handler function bucket #### | `string` | `""` | no |
+| <a name="input_subscription_handler_input_storage_bucket_region"></a> [subscription\_handler\_input\_storage\_bucket\_region](#input\_subscription\_handler\_input\_storage\_bucket\_region) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_input_uniform_bucket_level_access"></a> [subscription\_handler\_input\_uniform\_bucket\_level\_access](#input\_subscription\_handler\_input\_uniform\_bucket\_level\_access) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_name"></a> [subscription\_handler\_name](#input\_subscription\_handler\_name) | ## SubscriptionHandler-akashav2-asia-south1 function ### | `string` | `""` | no |
+| <a name="input_subscription_handler_object_bucket_name"></a> [subscription\_handler\_object\_bucket\_name](#input\_subscription\_handler\_object\_bucket\_name) | #Subscription handler storage bucket #### | `string` | `""` | no |
+| <a name="input_subscription_handler_object_name"></a> [subscription\_handler\_object\_name](#input\_subscription\_handler\_object\_name) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_region"></a> [subscription\_handler\_region](#input\_subscription\_handler\_region) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_runtime"></a> [subscription\_handler\_runtime](#input\_subscription\_handler\_runtime) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_available_cpu"></a> [subscription\_handler\_service\_config\_available\_cpu](#input\_subscription\_handler\_service\_config\_available\_cpu) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_env_variables"></a> [subscription\_handler\_service\_config\_env\_variables](#input\_subscription\_handler\_service\_config\_env\_variables) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_ingress_settings"></a> [subscription\_handler\_service\_config\_ingress\_settings](#input\_subscription\_handler\_service\_config\_ingress\_settings) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_max_instance_count"></a> [subscription\_handler\_service\_config\_max\_instance\_count](#input\_subscription\_handler\_service\_config\_max\_instance\_count) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_max_instance_request_concurrency"></a> [subscription\_handler\_service\_config\_max\_instance\_request\_concurrency](#input\_subscription\_handler\_service\_config\_max\_instance\_request\_concurrency) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_min_instance_count"></a> [subscription\_handler\_service\_config\_min\_instance\_count](#input\_subscription\_handler\_service\_config\_min\_instance\_count) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_service_account_email"></a> [subscription\_handler\_service\_config\_service\_account\_email](#input\_subscription\_handler\_service\_config\_service\_account\_email) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_timeout_seconds"></a> [subscription\_handler\_service\_config\_timeout\_seconds](#input\_subscription\_handler\_service\_config\_timeout\_seconds) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_service_config_traffic_to_latest_version"></a> [subscription\_handler\_service\_config\_traffic\_to\_latest\_version](#input\_subscription\_handler\_service\_config\_traffic\_to\_latest\_version) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_storage_object_name"></a> [subscription\_handler\_storage\_object\_name](#input\_subscription\_handler\_storage\_object\_name) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_trigger_region"></a> [subscription\_handler\_trigger\_region](#input\_subscription\_handler\_trigger\_region) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_trigger_retry_policy"></a> [subscription\_handler\_trigger\_retry\_policy](#input\_subscription\_handler\_trigger\_retry\_policy) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_trigger_type"></a> [subscription\_handler\_trigger\_type](#input\_subscription\_handler\_trigger\_type) | n/a | `string` | `""` | no |
+| <a name="input_subscription_handler_uniform_bucket_level_access"></a> [subscription\_handler\_uniform\_bucket\_level\_access](#input\_subscription\_handler\_uniform\_bucket\_level\_access) | n/a | `string` | `""` | no |
+| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | The name of the VPC network | `string` | n/a | yes |
+| <a name="input_vpc_self_link"></a> [vpc\_self\_link](#input\_vpc\_self\_link) | n/a | `string` | `""` | no |
+| <a name="input_zip"></a> [zip](#input\_zip) | ## archive zip file ### | `string` | `""` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_allow_http_https_name"></a> [allow\_http\_https\_name](#output\_allow\_http\_https\_name) | Name of the allow-http-https firewall rule |
+| <a name="output_allow_internal_communication_name"></a> [allow\_internal\_communication\_name](#output\_allow\_internal\_communication\_name) | Name of the allow-internal-communication firewall rule |
+| <a name="output_allow_mongo_db_name"></a> [allow\_mongo\_db\_name](#output\_allow\_mongo\_db\_name) | Name of the allow-mongo-db firewall rule |
+| <a name="output_allow_ssh_from_nat_name"></a> [allow\_ssh\_from\_nat\_name](#output\_allow\_ssh\_from\_nat\_name) | Name of the allow-ssh-from-nat firewall rule |
+| <a name="output_allow_ssh_on_nat_name"></a> [allow\_ssh\_on\_nat\_name](#output\_allow\_ssh\_on\_nat\_name) | Name of the allow-ssh-on-nat firewall rule |
+| <a name="output_created_vpc_name"></a> [created\_vpc\_name](#output\_created\_vpc\_name) | n/a |
+| <a name="output_created_vpc_self_link"></a> [created\_vpc\_self\_link](#output\_created\_vpc\_self\_link) | n/a |
+| <a name="output_cubroid_instance_service_account_email"></a> [cubroid\_instance\_service\_account\_email](#output\_cubroid\_instance\_service\_account\_email) | n/a |
+| <a name="output_cubroid_instance_template_id"></a> [cubroid\_instance\_template\_id](#output\_cubroid\_instance\_template\_id) | The ID of the instance template created by the cubroid module |
+| <a name="output_cubroid_instance_template_machine_type"></a> [cubroid\_instance\_template\_machine\_type](#output\_cubroid\_instance\_template\_machine\_type) | The machine type of the instance template created by the cubroid module |
+| <a name="output_cubroid_instance_template_name"></a> [cubroid\_instance\_template\_name](#output\_cubroid\_instance\_template\_name) | The name of the instance template created by the cubroid module |
+| <a name="output_cubroid_instance_template_region"></a> [cubroid\_instance\_template\_region](#output\_cubroid\_instance\_template\_region) | The region where the instance template is deployed |
+| <a name="output_cubroid_instance_template_self_link"></a> [cubroid\_instance\_template\_self\_link](#output\_cubroid\_instance\_template\_self\_link) | The self-link of the instance template created by the cubroid module |
+| <a name="output_cubyts_instance_service_account_email"></a> [cubyts\_instance\_service\_account\_email](#output\_cubyts\_instance\_service\_account\_email) | n/a |
+| <a name="output_cubyts_instance_template_id"></a> [cubyts\_instance\_template\_id](#output\_cubyts\_instance\_template\_id) | The ID of the instance template created by the cubroid module |
+| <a name="output_cubyts_instance_template_machine_type"></a> [cubyts\_instance\_template\_machine\_type](#output\_cubyts\_instance\_template\_machine\_type) | The machine type of the instance template created by the cubroid module |
+| <a name="output_cubyts_instance_template_name"></a> [cubyts\_instance\_template\_name](#output\_cubyts\_instance\_template\_name) | The name of the instance template created by the cubroid module |
+| <a name="output_cubyts_instance_template_region"></a> [cubyts\_instance\_template\_region](#output\_cubyts\_instance\_template\_region) | The region where the instance template is deployed |
+| <a name="output_cubyts_instance_template_self_link"></a> [cubyts\_instance\_template\_self\_link](#output\_cubyts\_instance\_template\_self\_link) | The self-link of the instance template created by the cubroid module |
+| <a name="output_internet_to_private_instances_name"></a> [internet\_to\_private\_instances\_name](#output\_internet\_to\_private\_instances\_name) | Name of the internet-to-private-instances firewall rule |
+| <a name="output_lb_health_check_name"></a> [lb\_health\_check\_name](#output\_lb\_health\_check\_name) | Name of the lb-health-check firewall rule |
+| <a name="output_loader_instance_service_account_email"></a> [loader\_instance\_service\_account\_email](#output\_loader\_instance\_service\_account\_email) | n/a |
+| <a name="output_loader_instance_template_id"></a> [loader\_instance\_template\_id](#output\_loader\_instance\_template\_id) | The ID of the instance template created by the cubroid module |
+| <a name="output_loader_instance_template_machine_type"></a> [loader\_instance\_template\_machine\_type](#output\_loader\_instance\_template\_machine\_type) | The machine type of the instance template created by the cubroid module |
+| <a name="output_loader_instance_template_name"></a> [loader\_instance\_template\_name](#output\_loader\_instance\_template\_name) | The name of the instance template created by the cubroid module |
+| <a name="output_loader_instance_template_region"></a> [loader\_instance\_template\_region](#output\_loader\_instance\_template\_region) | The region where the instance template is deployed |
+| <a name="output_loader_instance_template_self_link"></a> [loader\_instance\_template\_self\_link](#output\_loader\_instance\_template\_self\_link) | The self-link of the instance template created by the cubroid module |
+| <a name="output_nat_instance_name"></a> [nat\_instance\_name](#output\_nat\_instance\_name) | The name of the NAT instance |
+| <a name="output_nat_instance_network_interface"></a> [nat\_instance\_network\_interface](#output\_nat\_instance\_network\_interface) | The network interface details of the NAT instance |
+| <a name="output_nat_instance_self_link"></a> [nat\_instance\_self\_link](#output\_nat\_instance\_self\_link) | The self link of the NAT instance |
+| <a name="output_nat_instance_service_account_email"></a> [nat\_instance\_service\_account\_email](#output\_nat\_instance\_service\_account\_email) | n/a |
+| <a name="output_nat_instance_zone"></a> [nat\_instance\_zone](#output\_nat\_instance\_zone) | The zone of the NAT instance |
+| <a name="output_nat_route_name"></a> [nat\_route\_name](#output\_nat\_route\_name) | The name of the NAT to internet route from the routes module |
+| <a name="output_nat_static_private_ip"></a> [nat\_static\_private\_ip](#output\_nat\_static\_private\_ip) | The private IP address of the NAT instance |
+| <a name="output_nat_static_public_ip"></a> [nat\_static\_public\_ip](#output\_nat\_static\_public\_ip) | The public IP address of the NAT instance |
+| <a name="output_private_route_name"></a> [private\_route\_name](#output\_private\_route\_name) | The name of the private instance to internet route from the routes module |
+| <a name="output_subnet_1_name"></a> [subnet\_1\_name](#output\_subnet\_1\_name) | n/a |
+| <a name="output_subnet_2_name"></a> [subnet\_2\_name](#output\_subnet\_2\_name) | n/a |
+| <a name="output_subnet_3_name"></a> [subnet\_3\_name](#output\_subnet\_3\_name) | n/a |
+| <a name="output_subnet_4_name"></a> [subnet\_4\_name](#output\_subnet\_4\_name) | n/a |
