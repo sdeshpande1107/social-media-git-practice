@@ -192,7 +192,7 @@
 | <a name="input_loader-health-check-path"></a> [loader-health-check-path](#input\_loader-health-check-path) | n/a | `string` | `""` | no |
 | <a name="input_loader-instance-template-machine-type"></a> [loader-instance-template-machine-type](#input\_loader-instance-template-machine-type) | The machine type for the instance template | `string` | n/a | yes |
 | <a name="input_loader-instance-template-name"></a> [loader-instance-template-name](#input\_loader-instance-template-name) | The name of the instance template | `string` | n/a | yes |
-| <a name="input_loader-local-image"></a> [loader-local-image](#input\_loader-local-image) | n/a | `string` | `""` | no |
+| <a name="input_loader-local-image"></a> [loader-local-image](#input\_loader-local-image) | image of loader-local | `string` | `""` | no |
 | <a name="input_loader-mig-name"></a> [loader-mig-name](#input\_loader-mig-name) | n/a | `string` | `""` | no |
 | <a name="input_loader-service-account"></a> [loader-service-account](#input\_loader-service-account) | n/a | `string` | `""` | no |
 | <a name="input_loader-startup-script"></a> [loader-startup-script](#input\_loader-startup-script) | n/a | `string` | `""` | no |
